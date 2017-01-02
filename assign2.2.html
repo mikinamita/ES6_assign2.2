@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>ES6 inheritance</title>
+<meta charset="UTF-8">
+<script src=“https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js”></script>
+<script>
+class vehicle{
+constructor(name,type)
+{
+this.name=name;
+this.type=type;
+}
+getName()
+{
+return this.name;
+}
+getType()
+{
+return this.type;
+}
+}
+class car extends vehicle{
+constructor(name)
+{
+super(name,'4 wheeler');
+}
+getName()
+{
+return "car name is"+super.getName();
+}
+}
+class bike extends vehicle{
+constructor(name)
+{
+super(name,'2 wheeler');
+}
+getName()
+{
+return "bike name is "+super.getName();
+}
+}
+class bus extends vehicle{
+constructor(name)
+{
+super(name,'6 wheeler');
+}
+getName()
+{
+return "bus name is "+super.getName();
+}
+}
+let car1=new car('swift');
+console.log(car1.getName());
+console.log(car1.getType());
+let bike1=new bike('spelnder');
+console.log(bike1.getName());
+console.log(bike1.getType());
+let bus1=new bus('dtc');
+console.log(bus1.getName());
+console.log(bus1.getType());
+</script>
+</head>
+<body>
+
+</body>
+</html>
